@@ -1,10 +1,3 @@
----
-title: HA Kubernetes with Rancher in Minutes
-date: 2022-07-06 09:00:00 -700
-categories: [kubernetes,rancher,helm]
-tags: [kubernetes,rancher,helm,cert-manager]
----
-
 # Requirements
 - [ ] Ubuntu 20.04LTS
 - [ ] Load Balancer

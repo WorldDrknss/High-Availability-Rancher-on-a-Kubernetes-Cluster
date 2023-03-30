@@ -50,7 +50,7 @@ This command will spin up a kubernetes server that does not allow deployments. W
 curl -sfL https://get.k3s.io | sh -s - server \
   --node-taint CriticalAddonsOnly=true:NoExecute \
   --tls-san {LOADBALANCER} \
-  --datastore-endpoint=='mysql://{USERNAME}:{PASSWORD}@tcp({IP}:{PORT})/{DATABASE}'
+  --datastore-endpoint='mysql://{USERNAME}:{PASSWORD}@tcp({IP}:{PORT})/{DATABASE}'
 ```
 
 ## Token

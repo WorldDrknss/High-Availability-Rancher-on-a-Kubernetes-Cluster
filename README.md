@@ -50,6 +50,8 @@ This command will spin up a kubernetes server that does not allow deployments. W
 curl -sfL https://get.k3s.io | INSTALL_K3S_VERSION=v1.20.15+k3s1 sh -s - server \
   --node-taint CriticalAddonsOnly=true:NoExecute \
   --tls-san {LOADBALANCER} \
+  --disable servicelb \
+  --disable traefik \
   --datastore-endpoint='mysql://{USERNAME}:{PASSWORD}@tcp({IP}:{PORT})/{DATABASE}'
 ```
 
@@ -65,6 +67,8 @@ Run the following command to add additional servers to your cluster
 curl -sfL https://get.k3s.io | INSTALL_K3S_VERSION=v1.20.15+k3s1 sh -s - server \
   --node-taint CriticalAddonsOnly=true:NoExecute \
   --tls-san {LOADBALANCER} \
+  --disable servicelb \
+  --disable traefik \
   --token={TOKEN} \
   --datastore-endpoint='mysql://{USERNAME}:{PASSWORD}@tcp({IP}:{PORT}/{DATABASE}'
 ```

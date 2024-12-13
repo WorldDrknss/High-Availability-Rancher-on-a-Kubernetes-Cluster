@@ -47,7 +47,7 @@ Repleace the following variables
 
 This command will spin up a kubernetes server that does not allow deployments. We will utilize worker nodes for that.
 ```bash
-curl -sfL https://get.k3s.io | INSTALL_K3S_VERSION=v1.20.15+k3s1 sh -s - server \
+curl -sfL https://get.k3s.io | INSTALL_K3S_VERSION=v1.31.3+k3s1 sh -s - server \
   --node-taint CriticalAddonsOnly=true:NoExecute \
   --tls-san {LOADBALANCER} \
   --disable servicelb \
@@ -64,7 +64,7 @@ cat /var/lib/rancher/k3s/server/token
 ## Add Additional Servers
 Run the following command to add additional servers to your cluster
 ```bash
-curl -sfL https://get.k3s.io | INSTALL_K3S_VERSION=v1.20.15+k3s1 sh -s - server \
+curl -sfL https://get.k3s.io | INSTALL_K3S_VERSION=v1.31.3+k3s1 sh -s - server \
   --node-taint CriticalAddonsOnly=true:NoExecute \
   --tls-san {LOADBALANCER} \
   --disable servicelb \
@@ -75,7 +75,7 @@ curl -sfL https://get.k3s.io | INSTALL_K3S_VERSION=v1.20.15+k3s1 sh -s - server 
 
 ## Add Worker Nodes
 ```bash
-curl -sfL https://get.k3s.io | INSTALL_K3S_VERSION=v1.20.15+k3s1 K3S_URL=https://{LOADBALANCER}:6443 K3S_TOKEN={TOKEN} sh -s -
+curl -sfL https://get.k3s.io | INSTALL_K3S_VERSION=v1.31.3+k3s1 K3S_URL=https://{LOADBALANCER}:6443 K3S_TOKEN={TOKEN} sh -s -
 ```
 
 # Rancher Installation
